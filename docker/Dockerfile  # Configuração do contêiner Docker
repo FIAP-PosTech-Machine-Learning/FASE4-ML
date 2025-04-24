@@ -1,0 +1,26 @@
+FROM python:3.8-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the requirements files
+COPY api/requirements.txt ./api/requirements.txt
+COPY streamlit_app/requirements.txt ./streamlit_app/requirements.txt
+
+# Install dependencies
+RUN pip install --no-cache-dir -r api/requirements.txt
+RUN pip install --no-cache-dir -r streamlit_app/requirements.txt
+
+# Copy the application code
+COPY api/ ./api/
+COPY streamlit_app/ ./streamlit_app/
+COPY models/ ./models/
+COPY data/ ./data/
+COPY monitoring/ ./monitoring/
+
+# Expose the port for the API and Streamlit app
+EXPOSE 5000
+EXPOSE 8501
+
+# Command to run the API and Streamlit app
+CMD ["sh", "-c", "python api/app.py & streamlit run streamlit_app/app.py --server.port 8501 --server.address 0.0.0.0"]
