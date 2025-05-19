@@ -3,8 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.h5
-*.csv
+
 *.ipynb_checkpoints
 .env
 .venv/
@@ -26,3 +25,11 @@ __pycache__/
 *.swp
 .idea/
 .vscode/
+
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.ipynb_checkpoints/
