@@ -38,3 +38,11 @@ Suzano (SUZB3.SA)
 Eletrobras (ELET3.SA)
 WEG (WEGE3.SA)
 
+
+
+Date: Data da cotação.
+Close: Preço de fechamento da ação naquele dia (é a variável alvo/target do modelo).
+High: Maior preço atingido pela ação no dia.
+Low: Menor preço atingido pela ação no dia.
+Open: Preço de abertura da ação no dia.
+Volume: Quantidade de ações negociadas no dia.
