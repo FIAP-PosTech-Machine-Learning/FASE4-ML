@@ -1,0 +1,17 @@
+# Dependências API
+fastapi[all]
+tensorflow
+
+# Dependência para monitoramento
+prometheus-fastapi-instrumentator
+
+# Dependências para Streamlit
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+yfinance
+tensorflow
+scikit-learn
+requests
