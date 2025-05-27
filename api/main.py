@@ -14,5 +14,5 @@ app.include_router(predict.router)
 instrumentator = Instrumentator().instrument(app).expose(app)
 
 @app.get("/", include_in_schema=False)
-async def redirect_to_docs() -> None:
-    RedirectResponse("/docs")
+async def root():
+    return RedirectResponse(url="/docs")
